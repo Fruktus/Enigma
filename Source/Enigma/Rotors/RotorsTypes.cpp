@@ -7,9 +7,10 @@ RotorsTypes::RotorsTypes() {}
 
 RotorsTypes::~RotorsTypes() {}
 
-const char RotorsTypes::IC[] = "DMTWSILRUYQNKFEJCAZBPGXOHV";
-const char RotorsTypes::IIC[] = "HQZGPJTMOBLNCIFDYAWVEUSRKX";
-const char RotorsTypes::IIIC[] = "UQNTLSZFMREHDPXKIBVYGJCWOA";
+const std::string RotorsTypes::IC = "DMTWSILRUYQNKFEJCAZBPGXOHV";
+const std::string RotorsTypes::IIC = "HQZGPJTMOBLNCIFDYAWVEUSRKX";
+const std::string RotorsTypes::IIIC = "UQNTLSZFMREHDPXKIBVYGJCWOA";
+const std::string RotorsTypes::Reflector = "EJMZALYXVBWFCRQUONTSPIKHGD";
 
 const std::vector<RotorType> RotorsTypes::rotorTypes = {
 	{ PossibleRotors::IC, RotorsTypes::IC },
