@@ -1,0 +1,10 @@
+{
+	"files.exclude": {
+		"C:/Users/milos/Desktop/Applications/Projects/enigma/.git": true,
+		"C:/Users/milos/Desktop/Applications/Projects/enigma/.vs": true,
+		"C:/Users/milos/Desktop/Applications/Projects/enigma/.vscode": true,
+		"C:/Users/milos/Desktop/Applications/Projects/enigma/Content": true,
+		"C:/Users/milos/Desktop/Applications/Projects/enigma/Intermediate": true,
+		"C:/Users/milos/Desktop/Applications/Projects/enigma/Saved": true
+	}
+}

@@ -1,0 +1,1247 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Enigma Win32 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win32",
+				"Debug",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win32 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win32",
+				"Debug",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma Win32 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win32 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"Win32",
+				"Debug",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win32 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win32",
+				"DebugGame",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win32 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win32",
+				"DebugGame",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma Win32 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win32 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"Win32",
+				"DebugGame",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win32 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win32",
+				"Development",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win32 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win32",
+				"Development",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma Win32 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win32 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"Win32",
+				"Development",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win32 Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win32",
+				"Shipping",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win32 Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win32",
+				"Shipping",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma Win32 Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win32 Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"Win32",
+				"Shipping",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win32 Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win32",
+				"Test",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win32 Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win32",
+				"Test",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma Win32 Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win32 Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"Win32",
+				"Test",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win64 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win64",
+				"Debug",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win64 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win64",
+				"Debug",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma Win64 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win64 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"Win64",
+				"Debug",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win64 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win64 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma Win64 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win64 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win64 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win64",
+				"Development",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win64 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win64",
+				"Development",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma Win64 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win64 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"Win64",
+				"Development",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win64 Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win64",
+				"Shipping",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win64 Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win64",
+				"Shipping",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma Win64 Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win64 Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"Win64",
+				"Shipping",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win64 Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win64",
+				"Test",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win64 Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"Win64",
+				"Test",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma Win64 Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma Win64 Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"Win64",
+				"Test",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma IOS Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"IOS",
+				"Debug",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma IOS Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"IOS",
+				"Debug",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma IOS Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma IOS Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"IOS",
+				"Debug",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma IOS DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"IOS",
+				"DebugGame",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma IOS DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"IOS",
+				"DebugGame",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma IOS DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma IOS DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"IOS",
+				"DebugGame",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma IOS Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"IOS",
+				"Development",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma IOS Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"IOS",
+				"Development",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma IOS Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma IOS Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"IOS",
+				"Development",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma IOS Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"IOS",
+				"Shipping",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma IOS Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"IOS",
+				"Shipping",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma IOS Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma IOS Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"IOS",
+				"Shipping",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma IOS Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"IOS",
+				"Test",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma IOS Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"IOS",
+				"Test",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma IOS Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma IOS Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"IOS",
+				"Test",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma HTML5 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"HTML5",
+				"Debug",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma HTML5 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"HTML5",
+				"Debug",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma HTML5 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma HTML5 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"HTML5",
+				"Debug",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma HTML5 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"HTML5",
+				"DebugGame",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma HTML5 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"HTML5",
+				"DebugGame",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma HTML5 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma HTML5 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"HTML5",
+				"DebugGame",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma HTML5 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"HTML5",
+				"Development",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma HTML5 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"HTML5",
+				"Development",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma HTML5 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma HTML5 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"HTML5",
+				"Development",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma HTML5 Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"HTML5",
+				"Shipping",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma HTML5 Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"HTML5",
+				"Shipping",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma HTML5 Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma HTML5 Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"HTML5",
+				"Shipping",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma HTML5 Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"HTML5",
+				"Test",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma HTML5 Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Enigma",
+				"HTML5",
+				"Test",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Enigma HTML5 Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "Enigma HTML5 Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Enigma",
+				"HTML5",
+				"Test",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "EnigmaEditor Win64 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"EnigmaEditor",
+				"Win64",
+				"Debug",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "EnigmaEditor Win64 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"EnigmaEditor",
+				"Win64",
+				"Debug",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"EnigmaEditor Win64 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "EnigmaEditor Win64 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"EnigmaEditor",
+				"Win64",
+				"Debug",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "EnigmaEditor Win64 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"EnigmaEditor",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "EnigmaEditor Win64 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"EnigmaEditor",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"EnigmaEditor Win64 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "EnigmaEditor Win64 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"EnigmaEditor",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "EnigmaEditor Win64 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"EnigmaEditor",
+				"Win64",
+				"Development",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "EnigmaEditor Win64 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"EnigmaEditor",
+				"Win64",
+				"Development",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"EnigmaEditor Win64 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		},
+		{
+			"label": "EnigmaEditor Win64 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"EnigmaEditor",
+				"Win64",
+				"Development",
+				"C:\\Users\\milos\\Desktop\\Applications\\Projects\\enigma\\Enigma.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+			}
+		}
+	]
+}
