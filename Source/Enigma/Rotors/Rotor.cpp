@@ -80,3 +80,8 @@ void Rotor::setOffset(int offset)
 {
 	this->offset = this->withOverflow(offset);
 }
+
+int Rotor::getOffset()
+{
+	return this->offset;
+}
