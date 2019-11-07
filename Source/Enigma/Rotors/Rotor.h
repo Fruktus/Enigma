@@ -12,7 +12,7 @@ class ENIGMA_API Rotor
 {
 private:
 	static const int MAX_OFFSET = 25;
-	int8 offset = 0;
+	int offset = 0;
 
 public:
 	PossibleRotors rotorType;
@@ -32,4 +32,6 @@ public:
 
 	void increaseOffset();
 	void setOffset(int offset);
+
+	int getOffset();
 };

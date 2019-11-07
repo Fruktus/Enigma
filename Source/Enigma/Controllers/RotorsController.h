@@ -31,6 +31,7 @@ public:
 	ARotorsController();
 
 	RotorsSetting getCurrentRotors();
+	void doRotation();
 
 protected:
 	// Called when the game starts or when spawned

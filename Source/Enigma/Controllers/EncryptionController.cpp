@@ -1,6 +1,5 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "EncryptionController.h"
 
 // Sets default values
@@ -32,8 +31,9 @@ void AEncryptionController::setRotorsController(ARotorsController* controller)
 
 void AEncryptionController::encryptLetter(ELetter letterToEncode)
 {
-	RotorsSetting rotors = this->rotorsController->getCurrentRotors();
+	this->rotorsController->doRotation();
 
+	RotorsSetting rotors = this->rotorsController->getCurrentRotors();
 	int index = (int)letterToEncode;
 
 	index = this->encodeLetter(index, rotors.rightRotor);
@@ -47,6 +47,8 @@ void AEncryptionController::encryptLetter(ELetter letterToEncode)
 	index = this->reverseEncodeLetter(index, rotors.rightRotor);
 	
 	UE_LOG(LogTemp, Warning, TEXT("[[-- log index %d --]]"), index)
+
+	this->onLightLamp.Broadcast((ELetter) index);
 }
 
 int AEncryptionController::encodeLetter(int index, Rotor *rotor)

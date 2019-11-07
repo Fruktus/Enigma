@@ -37,3 +37,15 @@ RotorsSetting ARotorsController::getCurrentRotors()
 	return settings;
 }
 
+void ARotorsController::doRotation()
+{
+	this->rightRotor.increaseOffset();
+
+	if (this->rightRotor.getOffset() == 0) {
+		this->middleRotor.increaseOffset();
+		
+		if (this->middleRotor.getOffset() == 0) {
+			this->leftRotor.increaseOffset();
+		}
+	}
+}

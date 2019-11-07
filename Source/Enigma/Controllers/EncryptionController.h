@@ -9,12 +9,18 @@
 #include "../Helpers/EnigmaLetter.h"
 #include "EncryptionController.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FLightLampDelegate, ELetter, letter);
+
 UCLASS()
 class ENIGMA_API AEncryptionController : public AActor
 {
 	GENERATED_BODY()
 private:
 	ARotorsController* rotorsController;
+
+public:
+	UPROPERTY(BlueprintAssignable, BlueprintCallable)
+	FLightLampDelegate onLightLamp;
 
 protected:
 	// Called when the game starts or when spawned
