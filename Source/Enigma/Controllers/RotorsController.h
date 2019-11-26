@@ -12,19 +12,24 @@
 #include "RotorsController.generated.h"
 
 typedef struct {
-	Rotor* leftRotor;
-	Rotor* middleRotor;
-	Rotor* rightRotor;
+	ARotor* leftRotor;
+	ARotor* middleRotor;
+	ARotor* rightRotor;
 } RotorsSetting;
 
 UCLASS()
 class ENIGMA_API ARotorsController : public AActor
 {
 	GENERATED_BODY()
-private:
-	Rotor leftRotor;
-	Rotor middleRotor;
-	Rotor rightRotor;
+public:
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly)
+	ARotor *leftRotor;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly)
+	ARotor *middleRotor;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly)
+	ARotor *rightRotor;
 
 public:
 	// Sets default values for this actor's properties

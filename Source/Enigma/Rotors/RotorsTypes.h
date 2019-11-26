@@ -6,10 +6,11 @@
 
 #include "CoreMinimal.h"
 
-enum PossibleRotors { IC, IIC, IIIC };
+UENUM(BlueprintType)
+enum class EPossibleRotors : uint8 { IC, IIC, IIIC };
 
 typedef struct {
-	PossibleRotors type;
+	EPossibleRotors type;
 	std::string rotorWiring;
 } RotorType;
 
