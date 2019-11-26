@@ -13,7 +13,7 @@ const std::string RotorsTypes::IIIC = "UQNTLSZFMREHDPXKIBVYGJCWOA";
 const std::string RotorsTypes::Reflector = "EJMZALYXVBWFCRQUONTSPIKHGD";
 
 const std::vector<RotorType> RotorsTypes::rotorTypes = {
-	{ PossibleRotors::IC, RotorsTypes::IC },
-	{ PossibleRotors::IIC, RotorsTypes::IIC },
-	{ PossibleRotors::IIIC, RotorsTypes::IIIC },
+	{ EPossibleRotors::IC, RotorsTypes::IC },
+	{ EPossibleRotors::IIC, RotorsTypes::IIC },
+	{ EPossibleRotors::IIIC, RotorsTypes::IIIC },
 };

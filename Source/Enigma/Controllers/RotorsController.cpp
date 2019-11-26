@@ -8,9 +8,9 @@ ARotorsController::ARotorsController()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
-	leftRotor = Rotor(PossibleRotors::IC);
-	middleRotor = Rotor(PossibleRotors::IIC);
-	rightRotor = Rotor(PossibleRotors::IIIC);
+	// leftRotor = Rotor(EPossibleRotors::IC);
+	// middleRotor = Rotor(EPossibleRotors::IIC);
+	// rightRotor = Rotor(EPossibleRotors::IIIC);
 }
 
 // Called when the game starts or when spawned
@@ -29,9 +29,9 @@ void ARotorsController::Tick(float DeltaTime)
 RotorsSetting ARotorsController::getCurrentRotors()
 {
 	RotorsSetting settings = {
-		&leftRotor,
-		&middleRotor,
-		&rightRotor
+		leftRotor,
+		middleRotor,
+		rightRotor
 	};
 
 	return settings;
@@ -39,13 +39,13 @@ RotorsSetting ARotorsController::getCurrentRotors()
 
 void ARotorsController::doRotation()
 {
-	this->rightRotor.increaseOffset();
+	rightRotor->increaseOffset(true);
 
-	if (this->rightRotor.getOffset() == 0) {
-		this->middleRotor.increaseOffset();
+	if (rightRotor->getOffset() == 0) {
+		middleRotor->increaseOffset(true);
 		
-		if (this->middleRotor.getOffset() == 0) {
-			this->leftRotor.increaseOffset();
+		if (middleRotor->getOffset() == 0) {
+			leftRotor->increaseOffset(true);
 		}
 	}
 }

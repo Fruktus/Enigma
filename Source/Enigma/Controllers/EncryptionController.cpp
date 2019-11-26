@@ -51,12 +51,12 @@ void AEncryptionController::encryptLetter(ELetter letterToEncode)
 	this->onLightLamp.Broadcast((ELetter) index);
 }
 
-int AEncryptionController::encodeLetter(int index, Rotor *rotor)
+int AEncryptionController::encodeLetter(int index, ARotor *rotor)
 {
 	return rotor->getOutputIndex(index);
 }
 
-int AEncryptionController::reverseEncodeLetter(int index, Rotor *rotor)
+int AEncryptionController::reverseEncodeLetter(int index, ARotor *rotor)
 {
 	return rotor->getReversedOutputIndex(index);
 }

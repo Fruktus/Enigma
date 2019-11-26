@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "./RotorsController.h"
+#include "../Rotors/Rotor.h"
 #include "../Rotors/RotorsTypes.h"
 #include "../Helpers/EnigmaLetter.h"
 #include "EncryptionController.generated.h"
@@ -40,8 +41,8 @@ public:
 	void encryptLetter(ELetter letterToEncode);
 
 private:
-	int encodeLetter(int index, Rotor *rotor);
-	int reverseEncodeLetter(int index, Rotor *rotor);
+	int encodeLetter(int index, ARotor *rotor);
+	int reverseEncodeLetter(int index, ARotor *rotor);
 	int reflectLetter(int index);
 	int letterToIndex(char letter);
 	char indexToLetter(int index);

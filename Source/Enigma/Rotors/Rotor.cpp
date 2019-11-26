@@ -1,19 +1,30 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "Rotor.h"
 
-Rotor::Rotor()
-{}
+// Sets default values
+ARotor::ARotor()
+{
+ 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	PrimaryActorTick.bCanEverTick = false;
 
-Rotor::Rotor(PossibleRotors rotorType):
-	rotorType(rotorType)
-{}
+}
 
-Rotor::~Rotor()
-{}
+// Called when the game starts or when spawned
+void ARotor::BeginPlay()
+{
+	Super::BeginPlay();
+	
+}
 
-int Rotor::getOutputIndex(int16 index)
+// Called every frame
+void ARotor::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+}
+
+int ARotor::getOutputIndex(int16 index)
 {
 	std::string rotor = this->getRotor();
 
@@ -27,7 +38,7 @@ int Rotor::getOutputIndex(int16 index)
 	}
 }
 
-int Rotor::getReversedOutputIndex(int16 index)
+int ARotor::getReversedOutputIndex(int16 index)
 {
 	std::string rotor = this->getRotor();
 
@@ -44,7 +55,7 @@ int Rotor::getReversedOutputIndex(int16 index)
 	return -1;
 }
 
-std::string Rotor::getRotor()
+std::string ARotor::getRotor()
 {
 	std::string searched;
 
@@ -58,30 +69,36 @@ std::string Rotor::getRotor()
 	return searched;
 }
 
-int Rotor::withOverflow(int val)
+int ARotor::withOverflow(int val)
 {
-	return val > Rotor::MAX_OFFSET ? 0 : val;
+	return val > ARotor::MAX_OFFSET ? 0 : val;
 }
 
-int Rotor::withUnderflow(int val)
+int ARotor::withUnderflow(int val)
 {
-	return val < 0 ? Rotor::MAX_OFFSET : val;
+	return val < 0 ? ARotor::MAX_OFFSET : val;
 }
 
-void Rotor::increaseOffset()
+void ARotor::increaseOffset(bool applyOffset)
 {
 	this->offset++;
-	if (this->offset > Rotor::MAX_OFFSET) {
+	if (this->offset > ARotor::MAX_OFFSET) {
 		this->offset = 0;
+	}
+
+	UE_LOG(LogTemp, Warning, TEXT("[[-- test %f --]]"), stepDegree)
+	UE_LOG(LogTemp, Warning, TEXT("[[-- test %f --]]"), stepDegree * offset)
+	if (applyOffset) {
+		animateNewOffset(stepDegree * offset);
 	}
 }
 
-void Rotor::setOffset(int offset)
+void ARotor::setOffset(int offset)
 {
 	this->offset = this->withOverflow(offset);
 }
 
-int Rotor::getOffset()
+int ARotor::getOffset()
 {
 	return this->offset;
 }
