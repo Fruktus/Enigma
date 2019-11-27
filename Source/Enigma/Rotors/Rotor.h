@@ -42,11 +42,13 @@ public:
 	int getReversedOutputIndex(int16 index);
 
 	void increaseOffset(bool applyOffset = false);
-	void setOffset(int offset);
 
 	UFUNCTION(BlueprintCallable)
 	int getOffset();
 
-	UFUNCTION(BlueprintImplementableEvent)
+	UFUNCTION(BlueprintCallable)
+	void setOffset(int newOffset);
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
 	void animateNewOffset(float rotation);
 };
