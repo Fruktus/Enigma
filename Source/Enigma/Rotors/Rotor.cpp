@@ -93,12 +93,14 @@ void ARotor::increaseOffset(bool applyOffset)
 	}
 }
 
-void ARotor::setOffset(int offset)
-{
-	this->offset = this->withOverflow(offset);
-}
-
 int ARotor::getOffset()
 {
 	return this->offset;
+}
+
+void ARotor::setOffset(int newOffset)
+{
+	if (newOffset >= 0 && newOffset <= MAX_OFFSET) {
+		this->offset = newOffset;
+	}
 }
