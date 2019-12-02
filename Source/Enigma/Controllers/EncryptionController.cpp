@@ -29,7 +29,7 @@ void AEncryptionController::setRotorsController(ARotorsController* controller)
 	this->rotorsController = controller;
 }
 
-void AEncryptionController::encryptLetter(ELetter letterToEncode)
+ELetter AEncryptionController::encryptLetter(ELetter letterToEncode)
 {
 	this->rotorsController->doRotation();
 
@@ -44,11 +44,13 @@ void AEncryptionController::encryptLetter(ELetter letterToEncode)
 
 	index = this->reverseEncodeLetter(index, rotors.leftRotor);
 	index = this->reverseEncodeLetter(index, rotors.middleRotor);
-	index = this->reverseEncodeLetter(index, rotors.rightRotor);
+	ELetter result = (ELetter) this->reverseEncodeLetter(index, rotors.rightRotor);
 	
-	UE_LOG(LogTemp, Warning, TEXT("[[-- log index %d --]]"), index)
+	UE_LOG(LogTemp, Warning, TEXT("[[-- log index %d --]]"), result)
 
-	this->onLightLamp.Broadcast((ELetter) index);
+	onLightLampOn.Broadcast(result);
+
+	return result;
 }
 
 int AEncryptionController::encodeLetter(int index, ARotor *rotor)
@@ -72,4 +74,9 @@ void AEncryptionController::printChar(char charToPrint)
 	FString tmp(arr);
 
 	UE_LOG(LogTemp, Warning, TEXT("[[-- log %s --]]"), *tmp)
+}
+
+void AEncryptionController::turnOffLamp(ELetter letter)
+{
+	onLightLampOff.Broadcast(letter);
 }
