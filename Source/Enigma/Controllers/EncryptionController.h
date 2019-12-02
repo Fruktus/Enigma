@@ -10,7 +10,8 @@
 #include "../Helpers/EnigmaLetter.h"
 #include "EncryptionController.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FLightLampDelegate, ELetter, letter);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FLightLampOnDelegate, ELetter, letter);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FLightLampOffDelegate, ELetter, letter);
 
 UCLASS()
 class ENIGMA_API AEncryptionController : public AActor
@@ -21,7 +22,10 @@ private:
 
 public:
 	UPROPERTY(BlueprintAssignable, BlueprintCallable)
-	FLightLampDelegate onLightLamp;
+	FLightLampOnDelegate onLightLampOn;
+
+	UPROPERTY(BlueprintAssignable, BlueprintCallable)
+	FLightLampOffDelegate onLightLampOff;
 
 protected:
 	// Called when the game starts or when spawned
@@ -38,7 +42,10 @@ public:
 	void setRotorsController(ARotorsController* controller);
 
 	UFUNCTION(BlueprintCallable, Category = "Controller")
-	void encryptLetter(ELetter letterToEncode);
+	ELetter encryptLetter(ELetter letterToEncode);
+
+	UFUNCTION(BlueprintCallable, Category = "Controller")
+	void turnOffLamp(ELetter letter);
 
 private:
 	int encodeLetter(int index, ARotor *rotor);
