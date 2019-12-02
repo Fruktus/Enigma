@@ -12,6 +12,7 @@
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FLightLampOnDelegate, ELetter, letter);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FLightLampOffDelegate, ELetter, letter);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FUpdateTextsDelegate, ELetter, typedLetter, ELetter, codedLetter);
 
 UCLASS()
 class ENIGMA_API AEncryptionController : public AActor
@@ -26,6 +27,9 @@ public:
 
 	UPROPERTY(BlueprintAssignable, BlueprintCallable)
 	FLightLampOffDelegate onLightLampOff;
+
+	UPROPERTY(BlueprintAssignable, BlueprintCallable)
+	FUpdateTextsDelegate updateUIText;
 
 protected:
 	// Called when the game starts or when spawned

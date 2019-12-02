@@ -100,7 +100,11 @@ int ARotor::getOffset()
 
 void ARotor::setOffset(int newOffset)
 {
+	UE_LOG(LogTemp, Warning, TEXT("[[-- New offset %d --]]"), newOffset)
+
 	if (newOffset >= 0 && newOffset <= MAX_OFFSET) {
 		this->offset = newOffset;
+
+		UE_LOG(LogTemp, Warning, TEXT("[[-- Current offset %d --]]"), offset)
 	}
 }
