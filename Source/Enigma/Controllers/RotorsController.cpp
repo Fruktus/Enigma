@@ -8,9 +8,6 @@ ARotorsController::ARotorsController()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
-	// leftRotor = Rotor(EPossibleRotors::IC);
-	// middleRotor = Rotor(EPossibleRotors::IIC);
-	// rightRotor = Rotor(EPossibleRotors::IIIC);
 }
 
 // Called when the game starts or when spawned

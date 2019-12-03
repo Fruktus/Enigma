@@ -49,6 +49,7 @@ ELetter AEncryptionController::encryptLetter(ELetter letterToEncode)
 	UE_LOG(LogTemp, Warning, TEXT("[[-- log index %d --]]"), result)
 
 	onLightLampOn.Broadcast(result);
+	updateUIText.Broadcast(letterToEncode, result);
 
 	return result;
 }
