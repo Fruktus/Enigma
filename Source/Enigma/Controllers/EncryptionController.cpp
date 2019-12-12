@@ -45,8 +45,6 @@ ELetter AEncryptionController::encryptLetter(ELetter letterToEncode)
 	index = this->reverseEncodeLetter(index, rotors.leftRotor);
 	index = this->reverseEncodeLetter(index, rotors.middleRotor);
 	ELetter result = (ELetter) this->reverseEncodeLetter(index, rotors.rightRotor);
-	
-	UE_LOG(LogTemp, Warning, TEXT("[[-- log index %d --]]"), result)
 
 	onLightLampOn.Broadcast(result);
 	updateUIText.Broadcast(letterToEncode, result);

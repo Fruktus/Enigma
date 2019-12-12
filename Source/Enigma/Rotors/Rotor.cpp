@@ -71,12 +71,16 @@ std::string ARotor::getRotor()
 
 int ARotor::withOverflow(int val)
 {
-	return val > ARotor::MAX_OFFSET ? 0 : val;
+	return val % (MAX_OFFSET + 1);
 }
 
 int ARotor::withUnderflow(int val)
 {
-	return val < 0 ? ARotor::MAX_OFFSET : val;
+	while (val < 0) {
+		val = val + (MAX_OFFSET + 1);
+	}
+
+	return val % (MAX_OFFSET + 1);
 }
 
 void ARotor::increaseOffset(bool applyOffset)
@@ -86,8 +90,6 @@ void ARotor::increaseOffset(bool applyOffset)
 		this->offset = 0;
 	}
 
-	UE_LOG(LogTemp, Warning, TEXT("[[-- test %f --]]"), stepDegree)
-	UE_LOG(LogTemp, Warning, TEXT("[[-- test %f --]]"), stepDegree * offset)
 	if (applyOffset) {
 		animateNewOffset(stepDegree * offset);
 	}
@@ -100,11 +102,7 @@ int ARotor::getOffset()
 
 void ARotor::setOffset(int newOffset)
 {
-	UE_LOG(LogTemp, Warning, TEXT("[[-- New offset %d --]]"), newOffset)
-
 	if (newOffset >= 0 && newOffset <= MAX_OFFSET) {
 		this->offset = newOffset;
-
-		UE_LOG(LogTemp, Warning, TEXT("[[-- Current offset %d --]]"), offset)
 	}
 }
