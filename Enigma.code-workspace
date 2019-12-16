@@ -10,7 +10,8 @@
 	"settings": {
 		"typescript.tsc.autoDetect": "off",
 		"files.associations": {
-			"xstring": "cpp"
+			"xstring": "cpp",
+			"vector": "cpp"
 		}
 	}
 }

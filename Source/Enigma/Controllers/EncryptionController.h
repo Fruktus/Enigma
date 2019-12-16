@@ -8,6 +8,7 @@
 #include "../Rotors/Rotor.h"
 #include "../Rotors/RotorsTypes.h"
 #include "../Helpers/EnigmaLetter.h"
+#include "../Helpers/SwitchboardAdapter.h"
 #include "EncryptionController.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FLightLampOnDelegate, ELetter, letter);
@@ -30,6 +31,9 @@ public:
 
 	UPROPERTY(BlueprintAssignable, BlueprintCallable)
 	FUpdateTextsDelegate updateUIText;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly)
+	ASwitchboardAdapter *switchboardAdapter;
 
 protected:
 	// Called when the game starts or when spawned

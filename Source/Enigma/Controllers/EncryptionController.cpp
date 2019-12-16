@@ -34,7 +34,9 @@ ELetter AEncryptionController::encryptLetter(ELetter letterToEncode)
 	this->rotorsController->doRotation();
 
 	RotorsSetting rotors = this->rotorsController->getCurrentRotors();
-	int index = (int)letterToEncode;
+	int index = (int)switchboardAdapter->convertLetter(letterToEncode);
+
+	UE_LOG(LogTemp, Warning, TEXT("[[-- log something --]]"))
 
 	index = this->encodeLetter(index, rotors.rightRotor);
 	index = this->encodeLetter(index, rotors.middleRotor);
@@ -44,7 +46,7 @@ ELetter AEncryptionController::encryptLetter(ELetter letterToEncode)
 
 	index = this->reverseEncodeLetter(index, rotors.leftRotor);
 	index = this->reverseEncodeLetter(index, rotors.middleRotor);
-	ELetter result = (ELetter) this->reverseEncodeLetter(index, rotors.rightRotor);
+	ELetter result = switchboardAdapter->convertLetter((ELetter) this->reverseEncodeLetter(index, rotors.rightRotor));
 
 	onLightLampOn.Broadcast(result);
 	updateUIText.Broadcast(letterToEncode, result);
